@@ -122,3 +122,14 @@ div{
     width: 30%;    
     height: 10%;
 }
+.Restaurantes{
+    border-radius: 10px;
+    width: 40%;
+    height: 100px;
+    object-fit: cover;
+    overflow: hidden;
+}
+#texto{
+    color:darkcyan;
+    font-family: Arial black;
+}
