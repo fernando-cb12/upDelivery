@@ -1,51 +1,58 @@
-#logoCentrado {
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: azure;
+}
+
+/* Estilos para el logo */
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Estilo para la barra de búsqueda simulada */
+#searchBar {
+    width: 60%;
+    height: 35px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
 }
 
-#textoTitular {
+#searchText {
+    color: gray;
     font-family: Arial, sans-serif;
-    font-weight: bold;
-    color: rgb(42, 61, 124);
-    margin-left: 10px; 
-    font-size: 18px;
-}
-h1{
-    font-family: arial;
-    color: cadetblue;
-    text-align: center;
-    margin: 2px;
-}
-h5{
-    color: cadetblue;
-    font-family: sans-serif;
-    text-align: left;
-    margin: 6px;
-    margin-bottom: 16px;
-    margin-left: 10%;
-}
-h4{
-    color: cadetblue;
-    font-family: sans-serif;
-    text-align: center;
-    margin: 6px;
+    font-size: 14px;
 }
 
+/* Estilos para el botón de perfil */
+#profileButton {
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Estilos generales para el resto de la página */
 body {
     background-color: azure;
     text-align: center;
 }
 
-p{
-    background-color: azure;
-    color: azure;    
-    font-family: arial;
-    text-align: center;
-}
-
-.button{
+.button {
     background-color: cadetblue;
     border: 2px solid #422800;
     border-radius: 30px;
@@ -56,80 +63,32 @@ p{
     font-weight: 600;
     font-family: monospace;
     font-size: 10px;
-    font-size-adjust: auto;
     padding: 0 18px;
     line-height: 50px;
     text-align: center;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    width: 26.66%;    
+    width: 26.66%;
 }
 
-
-#logo{
-    margin: 10px;
-    width: 8%;
-    border-radius: 100px;
-}
-#promo{
+#promo, #promox {
     width: 40%;
     border-radius: 25px;
     height: 100px;
     object-fit: cover;
     overflow: hidden;
 }
-#promox{
-    width: 80%;
-    border-radius: 25px;
-    height: 100px;
-    object-fit: cover;
-    overflow: hidden;
+
+h5 {
+    color: cadetblue;
+    font-family: sans-serif;
+    text-align: left;
+    margin-left: 10%;
 }
-div{
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-#can{
-    height: 4x;
-    width: 15px;
-    border-radius: 10px;
-    background-color: lightgray;
-}
-#gcan{
-    height: 4x;
-    width: 15px;
-    border-radius: 10px;
-    background-color: gray;
-}
-#register{
-    background-color: cadetblue;
-    border: 2px solid #422800;
-    border-radius: 30px;
-    box-shadow: lightgray 4px 4px 0 0;
-    color: azure;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 600;
-    font-family: monospace;
-    font-size: 10px;
-    font-size-adjust: auto;
-    line-height: 30px;
+
+h4 {
+    color: cadetblue;
+    font-family: sans-serif;
     text-align: center;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 15%;    
-    height: 10%;
-}
-.Restaurantes{
-    border-radius: 10px;
-    width: 40%;
-    height: 100px;
-    object-fit: cover;
-    overflow: hidden;
-}
-#texto{
-    color:darkcyan;
-    font-family: Arial black;
 }
