@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Dueño</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #007f91;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 0;
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            margin: 20px 0;
+            width: 100%;
+            text-align: center;
+            padding: 12px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar a:hover {
+            background-color: #005768;
+        }
+        .content {
+            flex-grow: 1;
+            background-color: #ffffff;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .boxes-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .info-box {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .customer-name {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-top: 40px;
+        }
+        .section-content {
+            width: 100%;
+            max-height: 150px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        .product-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .product-list li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .delivery-button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007f91;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .delivery-button:hover {
+            background-color: #005768;
+        }
+        .cancel-button {
+            background-color: #ff4c4c;
+        }
+        .cancel-button:hover {
+            background-color: #cc0000;
+        }
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                padding: 20px 0;
+            }
+            .content {
+                padding: 20px;
+            }
+            .boxes-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Menú</h2>
+            <a href="#">Perfil</a>
+            <a href="#">Configuración</a>
+            <a href="#">Inventario</a>
+            <a href="#">Historial de pedidos</a>
+            <a href="#">Cerrar sesión</a>
+        </div>
+        <div class="content">
+            <h1>Pedidos Actuales</h1>
+            <div class="boxes-container">
+                <!-- Pedido 1 -->
+                <div class="info-box">
+                    <div class="section">
+                        <div class="section-title">A domicilio</div>
+                        <div class="customer-name">Luis Carlos</div>
+                    </div>
+                    <div class="section">
+                        <div class="section-content">
+                            <ul class="product-list">
+                                <li>Doritos 300g</li>
+                                <li>Fuze Tea 250ml</li>
+                                <li>Trident Cool Mint 24pz</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Modo de envío</div>
+                        <div class="button-container">
+                            <button class="delivery-button">Enviamos nosotros</button>
+                            <button class="delivery-button">Envías tú</button>
+                            <button class="delivery-button cancel-button">Cancelar Pedido</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pedido 2 -->
+                <div class="info-box">
+                    <div class="section">
+                        <div class="section-title">A domicilio</div>
+                        <div class="customer-name">María Gómez</div>
+                    </div>
+                    <div class="section">
+                        <div class="section-content">
+                            <ul class="product-list">
+                                <li>Pepsi 355ml</li>
+                                <li>Sabritas 340g</li>
+                                <li>Chocolate Hershey's 150g</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Modo de envío</div>
+                        <div class="button-container">
+                            <button class="delivery-button">Enviamos nosotros</button>
+                            <button class="delivery-button">Envías tú</button>
+                            <button class="delivery-button cancel-button">Cancelar Pedido</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pedido 3 -->
+                <div class="info-box">
+                    <div class="section">
+                        <div class="section-title">Recoger en Tienda</div>
+                        <div class="customer-name">Carlos Pérez</div>
+                    </div>
+                    <div class="section">
+                        <div class="section-content">
+                            <ul class="product-list">
+                                <li>Coca-Cola 500ml</li>
+                                <li>Papas Lays 300g</li>
+                                <li>Helado Napolitano 1L</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Avisanos</div>
+                        <div class="button-container">
+                            <button class="delivery-button"> Listo </button>
+                            <button class="delivery-button cancel-button">Cancelar Pedido</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pedido 4 -->
+                <div class="info-box">
+                    <div class="section">
+                        <div class="section-title">Recoger en Tienda</div>
+                        <div class="customer-name">Ana López</div>
+                    </div>
+                    <div class="section">
+                        <div class="section-content">
+                            <ul class="product-list">
+                                <li>Sprite 600ml</li>
+                                <li>Manzana Verde 2kg</li>
+                                <li>Yogurt Natural 1L</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="section-title">Avisanos</div>
+                        <div class="button-container">
+                            <button class="delivery-button">Listo</button>
+                            <button class="delivery-button cancel-button">Cancelar Pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
