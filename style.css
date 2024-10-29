@@ -284,3 +284,57 @@ main{
         position: relative;
     }
 }
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: azure;
+}
+
+/* Estilos para el logo */
+#logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Estilo para la barra de búsqueda simulada */
+#searchBar {
+    width: 60%;
+    height: 35px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
+}
+
+#searchText {
+    color: gray;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilos para el botón de perfil */
+#profileButton {
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Estilos generales para el resto de la página */
+body {
+    background-color: azure;
+    text-align: center;
+}
