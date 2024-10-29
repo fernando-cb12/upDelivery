@@ -1,34 +1,35 @@
-*{
+/* Ajuste general */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: "Bond",arial;
+    font-family: "Bond", arial;
 }
 
-body{
+body {
     background-image: url(imagenes/photo-1617957848811-9c07f14d7ba3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position:bottom center;
+    background-position: bottom center;
     background-attachment: fixed;
 }
 
-main{
-    width:100%;
+main {
+    width: 100%;
     padding: 20px;
     margin: auto;
     margin-top: 100px;
 }
 
-.contenedor_todo{
+.contenedor_todo {
     width: 100%;
     max-width: 800px;
     margin: auto;
     position: relative;
 }
 
-.caja_trasera{
+.caja_trasera {
     width: 100%;
     padding: 10px 20px;
     display: flex;
@@ -37,23 +38,23 @@ main{
     background-color: #5c9ca4;
 }
 
-.caja_trasera div{
-    margin:100px 40px;
+.caja_trasera div {
+    margin: 100px 40px;
     color: white;
     transition: all 500ms;
 }
 
 .caja_trasera div p,
-.caja_trasera div button{
+.caja_trasera div button {
     margin-top: 30px;
 }
 
-.caja_trasera div h3{
+.caja_trasera div h3 {
     font-weight: 400;
     font-size: 26px;
 }
 
-.caja_trasera button{
+.caja_trasera button {
     padding: 10px 40px;
     border: 2px solid white;
     background-color: transparent;
@@ -65,20 +66,20 @@ main{
     transform: all 300ms;
 }
 
-.caja_trasera button:hover{
+.caja_trasera button:hover {
     background: white;
     color: #46a2fd;
 }
 
 /*Formulario*/
 .login-image {
-    width: 100px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Makes it a block element */
-    margin: 0 auto 10px auto; /* Centers the image and adds bottom margin */
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
-.contenedor_login{
+.contenedor_login {
     display: flex;
     align-items: center;
     width: 100%;
@@ -89,23 +90,22 @@ main{
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-.contenedor_login form{
+.contenedor_login form {
     width: 100%;
-    padding: 80px 20px;
+    padding: 50px 20px;
     background: #fff;
     position: absolute;
     border-radius: 20px;
 }
 
-.contenedor_login form h2{
+.contenedor_login form h2 {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
     color:  #5c9ca4;
-
 }
 
-.contenedor_login form input{
+.contenedor_login form input {
     width: 100%;
     margin-top: 20px;
     padding: 10px;
@@ -115,7 +115,7 @@ main{
     outline: none;
 }
 
-.contenedor_login button{
+.contenedor_login button {
     padding: 10px 40px;
     margin-top: 40px;
     font-size: 14px;
@@ -126,41 +126,72 @@ main{
     outline: none;
 }
 
-.formulario_login{
+.formulario_login {
     opacity: 1;
     display: block;
 }
 
-.formulario_register{
+.formulario_register {
     display: none;
 }
 
-@media screen and (max-width: 850px){
-
-    main{
+/* Adaptabilidad */
+@media screen and (max-width: 850px) {
+    main {
         margin-top: 50px;
-
     }
 
-    .caja_trasera{
+    .caja_trasera {
         max-width: 350px;
         height: 300px;
         flex-direction: column;
         margin: auto;
     }
 
-    .caja_trasera div{
+    .caja_trasera div {
         margin: 0px;
         position: absolute;
     }
 
-    .contenedor_login{
+    .contenedor_login {
         top: -10px;
         left: -5px;
         margin: auto;
     }
-    .contenedor_login form{
+
+    .contenedor_login form {
         position: relative;
+        padding: 50px 15px;
+    }
+
+    .contenedor_login form h2 {
+        font-size: 24px;
+    }
+
+    .contenedor_login form input,
+    .contenedor_login button {
+        font-size: 14px;
+        padding: 8px;
     }
 }
 
+/* Adaptabilidad extra para pantallas móviles (menos de 480px) */
+@media screen and (max-width: 480px) {
+    .contenedor_login {
+        max-width: 90%;
+    }
+
+    .contenedor_login form {
+        padding: 30px 10px;
+    }
+
+    .contenedor_login form h2 {
+        font-size: 20px;
+    }
+
+    .contenedor_login form input,
+    .contenedor_login button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
